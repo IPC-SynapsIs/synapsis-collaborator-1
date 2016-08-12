@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p.
+     Welcome to #{title}, here are the CRUD urls:
+  ul
+    li 
+      /collabs : get list of all collaborators GET
+    li
+      /collabs/{id} : get a collaborator by his/her id GET
+    li
+      /collabs : create a collaborator POST
+    li
+      /collabs/{id} : update a collaborator PUT
+    li
+      /collabs/{id} : delete a collaborator DELETE
+  
