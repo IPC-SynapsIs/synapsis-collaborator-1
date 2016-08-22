@@ -18,7 +18,17 @@ npm start
 By default, the app will be exposed on port 3000.
 
 ##Data model and methods:
-The ressource Collaborator only has the following fields : firstName, lastName, matricule, entryDate. Each record is identified by the field id.
+The ressource Collaborator has the following fields : firstName, lastName, matricule, entryDate. Each record is identified by the field id.
+
+It also contains the following fields:
+* professionalExperiences : array of professionalExperiences, with the following fields : title, dateStart, dateEnd, idProject, description
+
+*academicBackground : array of academicBackgrounds, with the following fields : title, description
+
+*academicBackground : array of languages, with the following fields : language, level
+
+*miscellaneous : array of miscellaneous, with the following fields : title, description
+
 
 The app supports all CRUD methods : 
 

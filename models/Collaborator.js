@@ -6,7 +6,30 @@ var CollaboratorSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     matricule: String,
-    entryDate: Date
+    entryDate: Date,
+    
+    professionalExperiences : [{
+        title: String,
+        dateStart : Date,
+        dateEnd : Date,
+        idProject : String,
+        description:String    
+    }],
+
+    academicBackground : [{
+        title:String,
+        description: String
+    }],
+
+    languages : [{
+        language : String,
+        level : String
+    }],
+    
+    miscellaneous : [{
+        title : String,
+        description: String
+    }]
 });
 
 module.exports = mongoose.model('Collaborator', CollaboratorSchema);
