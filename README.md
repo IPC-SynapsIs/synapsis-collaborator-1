@@ -44,8 +44,12 @@ To build the docker image for this app, use this command:
 docker build -t poney/collab .
 ```
 
-Then run the image in a container using the following:
+You also have to run a container for the mongodb database, to to that simply type 
 ```
-docker run -p 8080:8080 -d poney/collab .
+docker run --name mymongo -d mongo
 ```
 
+Then run the image in a container using the following:
+```
+docker run -it -p 8080:8080 --link mymongo:mongodatabase poney/collab
+```

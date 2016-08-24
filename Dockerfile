@@ -1,9 +1,10 @@
 FROM node:argon
+#FROM ubuntu:latest
 
 RUN apt-get update -y
-RUN apt-get -y install mongodb
-RUN mkdir -p /data/db/
-#RUN mongod
+#RUN apt-get -y install mongodb
+#RUN apt-get -y install nodejs-legacy npm
+#RUN mkdir -p /data/db/
 
 RUN mkdir -p /urs/src/app
 WORKDIR /usr/src/app
