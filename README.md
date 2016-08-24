@@ -37,3 +37,15 @@ The app supports all CRUD methods :
 3. POST /collabs : create a collaborator
 4. PUT /collabs : update a collaborator
 5. DELETE /collabs/{id} : delete a collaborator
+
+##Run with Docker
+To build the docker image for this app, use this command:
+```
+docker build -t poney/collab .
+```
+
+Then run the image in a container using the following:
+```
+docker run -p 8080:8080 -d poney/collab .
+```
+
