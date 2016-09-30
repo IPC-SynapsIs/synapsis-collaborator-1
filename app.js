@@ -8,12 +8,13 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 //var users = require('./routes/users');
 
+const PORT = 8080;
 
 //Connect to the mongoDB database:
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/collaborator')
+mongoose.connect('mongodb://mongodatabase/collaborator')
     .then(()=>console.log("Connected to the collaborator database!"))
     .catch((err)=> console.error(err));
 
@@ -76,3 +77,4 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+app.listen(PORT);
