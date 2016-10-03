@@ -7,6 +7,7 @@ var CollaboratorSchema = new mongoose.Schema({
     lastName: String,
     matricule: String,
     entryDate: Date,
+    _id:String,
     
     professionalExperiences : [{
         title: String,

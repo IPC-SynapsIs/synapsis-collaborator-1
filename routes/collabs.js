@@ -17,9 +17,17 @@ router.get('/', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
     Collaborator.findById(req.params.id, function(err, collab){
         if(err) return next(err);
-        else res.json(collab);    
+        else res.json(collab);
     });
-}) 
+})
+
+/*GET collaborators by project ID*/
+router.get('/project/:id', function(req, res, next) {
+    Collaborator.find({'professionalExperiences.idProject' : req.params.id}, function(err, collabs){
+        if(err) return next(err);
+        else res.json(collabs);
+    });
+})
 
 /* POST = create a collaborator*/
 router.post('/', function(req, res, next){

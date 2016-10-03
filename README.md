@@ -34,9 +34,10 @@ The app supports all CRUD methods :
 
 1. GET /collabs : list of all collaborators
 2. GET /collabs/{i} : get a collaborator by its id
-3. POST /collabs : create a collaborator
-4. PUT /collabs : update a collaborator
-5. DELETE /collabs/{id} : delete a collaborator
+3. GET /collabs/poject/{i} : get collaborators by their project id
+4. POST /collabs : create a collaborator
+5. PUT /collabs : update a collaborator
+6. DELETE /collabs/{id} : delete a collaborator
 
 ##Run with Docker
 To build the docker image for this app, use this command:
