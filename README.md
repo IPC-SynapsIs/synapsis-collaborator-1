@@ -34,7 +34,7 @@ The app supports all CRUD methods :
 
 1. GET /collabs : list of all collaborators
 2. GET /collabs/{i} : get a collaborator by its id
-3. GET /collabs/poject/{i} : get collaborators by their project id
+3. GET /collabs/project/{i} : get collaborators by their project id
 4. POST /collabs : create a collaborator
 5. PUT /collabs : update a collaborator
 6. DELETE /collabs/{id} : delete a collaborator
