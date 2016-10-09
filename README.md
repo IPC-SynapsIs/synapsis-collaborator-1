@@ -46,7 +46,7 @@ docker build -t poney/collab .
 
 You also have to run a container for the mongodb database, to to that simply type 
 ```
-docker run --name mymongo -d mongo
+docker run -v /opt/mongodb/db:/data/db --name mymongo -d mongo
 ```
 
 Then run the image in a container using the following:
