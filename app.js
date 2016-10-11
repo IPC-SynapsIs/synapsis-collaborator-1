@@ -14,7 +14,7 @@ const PORT = 8080;
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://mongodatabase/collaborator')
+mongoose.connect('mongodb://bdd.ipc-synapsis.org/collaborator')
     .then(()=>console.log("Connected to the collaborator database!"))
     .catch((err)=> console.error(err));
 
