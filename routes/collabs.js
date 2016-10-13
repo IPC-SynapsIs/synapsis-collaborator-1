@@ -45,6 +45,14 @@ router.put('/:id', function(req, res, next){
     });
 });
 
+/* PUT : Add a poject to a collaborator*/
+router.put('/project/:id', function(req, res, next){
+    Collaborator.update({_id : req.params.id}, { $addToSet:{professionalExperiences : req.body}}, function(err, post){
+        if(err) return next(err);
+        else res.json(post);
+    });
+});
+
 /* DELETE : delete a Collaborator*/
 router.delete('/:id', function(req, res, next){
     Collaborator.findByIdAndRemove(req.params.id, req.body, function(err, post){
