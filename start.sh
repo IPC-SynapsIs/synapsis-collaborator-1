@@ -1,4 +1,4 @@
-mongod
+#mongod
 
 npm start
 
